@@ -39,7 +39,7 @@ class BankAccount:
         return False
     
     def full_info(self):
-        return self.hero.name + " " + self.balance
+        return self.hero.name + " " + self._balance
     
     def get_bank_name(self):
         return self.bank_name
@@ -52,7 +52,7 @@ class BankAccount:
         return f"{self.hero.name} | Баланс: {self._balance} SOM"
 
     def __add__(self, other):
-        if self.hero.name == other.hero.name:
+        if type(self.hero) == type(other.hero):
             return self._balance + other._balance
         else: 
             return "Ошибка: Нельзя сложить счета героев разных классов!"
