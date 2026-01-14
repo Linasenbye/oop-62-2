@@ -107,5 +107,5 @@ print("Mage1 == Mage2 ?", acc1 == acc2)  # True — одинаковое имя 
 print("Mage1 == Warrior ?", acc1 == acc3)  # False
 
 # --- SMS ---
-sms = KGSms()
+sms = RUSms()
 print("\n", sms.send_otp("+996777123456"))
